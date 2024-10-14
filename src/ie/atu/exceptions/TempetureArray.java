@@ -8,12 +8,15 @@ public class TempetureArray {
         
         System.out.print("Enter a day(1-7): ");
         int day =scanner.nextInt();
+        scanner.close();
 
         try {
             System.out.println("Temepetures for day " + day + ": "+ tempetures[day - 1]);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println( "Invalid day please enter another number between 1 and 7");
+        }finally{
+            System.out.println("You've choosen a tempeture");
         }
-       
+      
     }
 }
