@@ -5,8 +5,8 @@ import java.io.FileReader;
 
 public class CheckedExceptionHandling {
     public static void main(String[] args) {
-        try {
-            FileReader reader = new FileReader("example.txt"); // This line may throw IOException
+        try(FileReader reader = new FileReader("example.txt"); ) {
+            // This line may throw IOException
             System.out.println("File opened successfully");
         } catch (Exception e) {
             System.out.println("there is an error");
